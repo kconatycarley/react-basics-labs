@@ -61,7 +61,26 @@ function App() {
   
   return (
     <div className="container">
-      <h1>Tasky</h1>
+     {/* App Header */}
+     <Container component="main">
+        <Typography
+          component="h1"
+          variant="h2"
+          align="center"
+          gutterBottom
+          sx = {{
+            backgroundColor: 'gray',
+            textAlign: 'center',
+            color: 'white',
+            padding: '20px',
+            margin: '20px 0 40px 0',
+            borderRadius: '4px'
+          }}
+        >
+          Tasky
+        </Typography>
+      </Container>
+      {/* End App Header */}
       {taskState.tasks.map((task, index) => (              
     <Task 
       title={task.title}
